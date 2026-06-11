@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeCoach — AI Programming Tutor</title>
+  <meta name="description" content="Learn concepts, fix bugs, practice quizzes, and improve your coding skills with AI." />
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧑‍💻</text></svg>" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/">
+        <div class="logo-icon">🧑‍💻</div>
+        CodeCoach
+      </a>
+      <button class="dark-toggle" id="darkToggle" title="Toggle dark mode" aria-label="Toggle dark mode"></button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-badge">✨ AI-Powered Learning</div>
+        <h1>Learn to code with <span>confidence</span></h1>
+        <p>Learn concepts, fix bugs, practice quizzes, and improve your coding skills with AI.</p>
+      </section>
+
+      <!-- Input Section -->
+      <section class="input-section">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">💬</div>
+            <div>
+              <div class="card-title">Ask CodeCoach</div>
+              <div class="card-subtitle">Ctrl + Enter to generate</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="question">Your question or code</label>
+            <textarea
+              id="question"
+              placeholder="Ask a programming question or paste code to debug...&#10;&#10;Examples:&#10;• Teach me Python variables&#10;• How does recursion work in JavaScript?&#10;• (In Fix mode) paste your buggy code here"
+            ></textarea>
+            <div class="char-count" id="charCount">0 / 3000</div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" style="margin-bottom:0">
+              <label for="skillLevel">Skill level</label>
+              <select id="skillLevel">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-bottom:0">
+              <label for="mode">Mode</label>
+              <select id="mode">
+                <option value="learn">📘 Learn Topic</option>
+                <option value="fix">🔧 Fix My Code</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="generateBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Generate Content
+          </button>
+        </div>
+      </section>
+
+      <!-- Spinner -->
+      <div class="spinner-wrap" id="spinnerWrap">
+        <div class="spinner"></div>
+        <div class="spinner-text">CodeCoach is thinking...</div>
+      </div>
+
+      <!-- Results -->
+      <section id="results"></section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>Built with Flask &amp; Groq · <strong>CodeCoach</strong> &copy; 2025</div>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
