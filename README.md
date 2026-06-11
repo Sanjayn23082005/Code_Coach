@@ -41,8 +41,8 @@ codecoach/
 ├── static/
 │   ├── style.css             # All styles
 │   └── script.js             # All frontend logic
-├── .env                      # Your API key (never commit this)
-├── .env.example              # Safe template to share
+├── .env                      # API key 
+├── .env.example              # template to share
 ├── requirements.txt
 └── README.md
 ```
